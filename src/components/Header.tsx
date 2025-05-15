@@ -4,14 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
-import { MdHomeWork, MdLogin } from "react-icons/md";
-import { IoMenu, IoSearch } from "react-icons/io5";
+import { MdHomeWork } from "react-icons/md";
+import { IoSearch } from "react-icons/io5";
 import {
   FaBlog,
   FaHeadphones,
   FaHeart,
   FaHome,
   FaPodcast,
+  FaRegUser,
+  FaUser,
 } from "react-icons/fa";
 import { PiMaskHappyFill } from "react-icons/pi";
 import { FaBasketShopping } from "react-icons/fa6";
@@ -36,7 +38,7 @@ interface RightMenuType {
   icon: React.ReactElement;
 }
 
-const RightMenuType: RightMenuType[] = [
+const rightMenuButtons: RightMenuType[] = [
   { link: "cart", icon: <FaBasketShopping /> },
   { link: "Interest", icon: <FaHeart /> },
 ];
@@ -48,22 +50,22 @@ function Header() {
   const [isLargeScreen, setIsLargeScreen] = useState<boolean>(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        const currentScrollY = window.scrollY;
 
-      setShowSearch(currentScrollY >= window.innerHeight);
+        setShowSearch(currentScrollY >= window.innerHeight);
 
-      if (currentScrollY === 0 || currentScrollY < lastScrollY) {
-        setShowMenu(true);
-      } else {
-        setShowMenu(false);
-      }
+        if (window.innerWidth > 760) {
+          setShowMenu(currentScrollY === 0 || currentScrollY < lastScrollY);
+        }
 
-      setLastScrollY(currentScrollY);
-    };
+        setLastScrollY(currentScrollY);
+      };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
   }, [lastScrollY]);
 
   useEffect(() => {
@@ -91,7 +93,8 @@ function Header() {
                 alt="rest net"
                 width={120}
                 height={100}
-                sizes="(max-width: 640px) 80px, (max-width: 1024px) 100px, 120px"
+                layout="responsive"
+                sizes="(max-width: 640px) 90px, (max-width: 1024px) 100px, 120px"
               />
             </Link>
           </div>
@@ -122,12 +125,12 @@ function Header() {
               title="login"
               width="w-12"
               height="h-12"
-              icon={<MdLogin />}
+              icon={<FaRegUser />}
             />
           </div>
         </div>
       </main>
-      { showMenu && (
+      {showMenu && (
         <menu
           className={`w-full ${
             isLargeScreen
@@ -140,41 +143,31 @@ function Header() {
               isLargeScreen ? "show_menu absolute" : ""
             } `}
           >
-            <div className="flex flex-auto justify-center items-center">
-              <ul className="flex-auto flex sm:justify-start justify-between items-center sm:gap-1">
+            <div className="flex  flex-auto sm:flex-none justify-center items-center">
+              <ul className="flex flex-auto sm:flex-none sm:justify-start justify-between items-center sm:gap-1">
                 {menuButtons.map((btn, index) => (
-                  <li key={index}>
+                  <li
+                    key={index}
+                    className="
+                  transition duration-200 ease-linear hover:text-[#0d4b72]
+                sm:text-base text-sm flex flex-1 sm:flex-auto sm:flex-row flex-col  items-center justify-center
+                  sm:border-none border-r border-slate-300 sm:py-0 py-2"
+                  >
                     <Link
                       href={btn.link}
-                      className="uppercase font-bold px-2
-                      transition duration-200 ease-linear hover:text-[#0d4b72] 
-                      sm:flex-row flex-col sm:text-base text-sm flex flex-auto items-center justify-center gap-1
-                      sm:border-none border-r border-slate-300 sm:py-0 py-2"
+                      className="px-1 flex sm:flex-row flex-col items-center gap-1 uppercase font-bold"
                     >
                       {btn.icon}
                       {btn.title}
                     </Link>
                   </li>
                 ))}
-                {!isLargeScreen ? (
-                  <li>
-                    <span
-                      className="uppercase font-bold px-2
-                      transition duration-200 ease-linear hover:text-[#0d4b72] 
-                      sm:flex-row flex-col sm:text-base text-sm flex flex-auto items-center justify-center gap-1
-                      sm:border-none border-r border-slate-300 sm:py-0 py-2"
-                    >
-                      <IoMenu />
-                      more
-                    </span>
-                  </li>
-                ) : null}
               </ul>
             </div>
             {isLargeScreen && (
               <div className="flex justify-center items-center">
                 <ul className="flex justify-center items-center gap-4 uppercase outline-none text-xl text-slate-600">
-                  {RightMenuType.map((btn, index) => (
+                  {rightMenuButtons.map((btn, index) => (
                     <li key={index}>
                       <Link href={btn.link}>{btn.icon}</Link>
                     </li>
