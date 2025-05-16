@@ -1,11 +1,13 @@
 import CartItems from "@/components/CartItems";
 import Hero from "@/components/Hero";
+import Symbol from "@/components/Symbol";
 
 export default function Home() {
   return (
-    <section className="w-full">
+    <section className="w-full relative">
       <Hero />
-      <CartItems title="popular location"/>
+      <Symbol/>
+      <CartItems title="popular tour"/>
     </section>
   );
 }
