@@ -2,13 +2,11 @@
 import React, { useEffect, useState } from "react";
 
 function Button({
-  color,
   title,
   icon,
   width,
   height,
 }: {
-  color: string;
   title: string;
   icon: React.ReactElement;
   width: string;
@@ -32,7 +30,7 @@ function Button({
   return (
     <button
       className={`outline-none flex justify-center items-center border border-transparent rounded-full cursor-pointer text-white font-bold transition duration-300 ease-linear hover:scale-95 
-        ${color} ${isLargeScreen ? "px-8 py-2" : "p-2"} w-${width} h-${height}`}
+       bg-[#0d4b72] ${isLargeScreen ? "px-8 py-2" : "p-2"} w-${width} h-${height}`}
     >
       {isLargeScreen ? title : icon}
     </button>

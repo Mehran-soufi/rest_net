@@ -54,7 +54,7 @@ function Header() {
       const handleScroll = () => {
         const currentScrollY = window.scrollY;
 
-        setShowSearch(currentScrollY >= window.innerHeight);
+        setShowSearch(currentScrollY >= window.innerHeight / 2);
 
         if (window.innerWidth > 760) {
           setShowMenu(currentScrollY === 0 || currentScrollY < lastScrollY);
@@ -83,8 +83,8 @@ function Header() {
 
   return (
     <header className="w-full flex flex-col sticky top-0 ransition duration-200 ease-linear overflow-hidden border-b border-slate-200 z-50 bg-white">
-      <main className="w-full flex justify-center py-2 z-20">
-        <div className="w-[95%] flex justify-between items-center bg-white">
+      <main className="w-full flex justify-center py-2 z-20  bg-white">
+        <div className="w-[95%] flex justify-between items-center">
           {/* left header */}
           <div className="flex justify-start items-center">
             <Link href="/" className="outline-none border-none">
@@ -113,7 +113,6 @@ function Header() {
           <div className="flex justify-end items-center gap-1">
             {!isLargeScreen && (
               <Button
-                color="bg-[#0d4b72]"
                 title="login"
                 width="w-12"
                 height="h-12"
@@ -121,7 +120,6 @@ function Header() {
               />
             )}
             <Button
-              color="bg-[#0d4b72]"
               title="login"
               width="w-12"
               height="h-12"
@@ -132,7 +130,7 @@ function Header() {
       </main>
       {showMenu && (
         <menu
-          className={`w-full ${
+          className={`w-full bg-white ${
             isLargeScreen
               ? "relative"
               : "fixed bottom-0 border-t border-slate-300"

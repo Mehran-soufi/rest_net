@@ -8,7 +8,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  height: 300vh;
 }
 
 /* header search */
@@ -25,7 +24,7 @@ body {
 }
 
 /* show menu */
-.show_menu{
+.show_menu {
   animation: showMenu 0.3s ease-in;
 }
 @keyframes showMenu {
@@ -35,4 +34,26 @@ body {
   to {
     top: 0;
   }
+}
+
+/* hero-section */
+.hero-section {
+  background-image: url("/assets/hero/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    background-position: top;
+  }
+}
+
+/* datePicker */
+.react-datepicker {
+  /* width: 100% !important; */
+  max-width: none !important;
+  font-family: "Poppins", sans-serif !important;
+  background: transparent !important;
 }
