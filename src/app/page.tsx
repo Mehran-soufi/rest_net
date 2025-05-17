@@ -2,6 +2,7 @@ import CartItems from "@/components/CartItems";
 import Hero from "@/components/Hero";
 import HeroPodcast from "@/components/HeroPodcast";
 import MobileApp from "@/components/MobileApp";
+import PopularCountry from "@/components/PopularCountry";
 import Symbol from "@/components/Symbol";
 
 export default function Home() {
@@ -10,8 +11,9 @@ export default function Home() {
       <Hero />
       <Symbol />
       <CartItems title="popular tour" />
+      <PopularCountry />
       <HeroPodcast />
-      <MobileApp/>
+      <MobileApp />
     </section>
   );
 }
