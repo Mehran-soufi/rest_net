@@ -62,7 +62,7 @@ const country: CountryType[] = [
 
 function PopularCountry() {
   return (
-    <div className="w-full flex justify-center items-center my-8 py-8 bg-slate-50">
+    <div className="w-full flex justify-center items-center my-8 py-8">
       <div className="w-11/12 h-[50vh]">
         <Swiper
           slidesPerView={1.2}

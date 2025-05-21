@@ -1,4 +1,5 @@
 import CartItems from "@/components/CartItems";
+import Colleagues from "@/components/Colleagues";
 import Hero from "@/components/Hero";
 import HeroPodcast from "@/components/HeroPodcast";
 import HomeBlog from "@/components/HomeBlog";
@@ -11,8 +12,10 @@ export default function Home() {
     <section className="w-full relative">
       <Hero />
       <Symbol />
-      <CartItems title="popular tour" />
+      <CartItems title="popular Tour" />
+      <CartItems title="popular Hotol" />
       <PopularCountry />
+      <Colleagues />
       <HomeBlog />
       <HeroPodcast />
       <MobileApp />
