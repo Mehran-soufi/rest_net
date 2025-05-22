@@ -31,8 +31,8 @@ const country: CountryType[] = [
     img: "/assets/country/canada.jpg",
   },
   {
-    name: "Turkey",
-    img: "/assets/country/turkey.jpg",
+    name: "Japan",
+    img: "/assets/country/japan.jpg",
   },
   {
     name: "Russia",

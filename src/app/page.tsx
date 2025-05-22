@@ -1,5 +1,6 @@
 import CartItems from "@/components/CartItems";
 import Colleagues from "@/components/Colleagues";
+import CountryInformation from "@/components/CountryInformation";
 import Hero from "@/components/Hero";
 import HeroPodcast from "@/components/HeroPodcast";
 import HomeBlog from "@/components/HomeBlog";
@@ -14,6 +15,7 @@ export default function Home() {
       <Symbol />
       <CartItems title="popular Tour" />
       <CartItems title="popular Hotol" />
+      <CountryInformation />
       <PopularCountry />
       <Colleagues />
       <HomeBlog />
