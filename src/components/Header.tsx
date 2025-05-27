@@ -114,15 +114,11 @@ function Header() {
             {!isLargeScreen && (
               <Button
                 title="login"
-                width="w-12"
-                height="h-12"
                 icon={<IoSearch />}
               />
             )}
             <Button
               title="login"
-              width="w-12"
-              height="h-12"
               icon={<FaRegUser />}
             />
           </div>

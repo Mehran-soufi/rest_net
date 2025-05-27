@@ -47,7 +47,7 @@ function CartItems({ title }: { title: string }) {
               {Array.from({ length: 7 }).map((_, index) => (
                 <SwiperSlide key={index}>
                   <Link
-                    href="/"
+                    href={`/${index}`}
                     target="_blank"
                     className="w-full h-full no-underline"
                   >

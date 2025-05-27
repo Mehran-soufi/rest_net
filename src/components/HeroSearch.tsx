@@ -135,8 +135,6 @@ function HeroSearch() {
         <Button
           title="search"
           icon={<IoSearch />}
-          width="w-full"
-          height="h-full"
         />
       </div>
 
