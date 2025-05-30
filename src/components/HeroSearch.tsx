@@ -24,7 +24,6 @@ function HeroSearch() {
   const [cityValue, setCityValue] = useState<string>("");
 
   const [isActiveDate, setIsActiveDate] = useState<boolean>(false);
-  const [selectedDateOne, setSelectedDateOne] = useState<Date | null>(null);
   const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([
     null,
     null,

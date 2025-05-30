@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Button from "./Button";
 import { BsFillSendArrowUpFill } from "react-icons/bs";
 import { FaRegStar, FaRegUser } from "react-icons/fa";
