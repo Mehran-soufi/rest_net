@@ -13,7 +13,6 @@ import {
   FaHome,
   FaPodcast,
   FaRegUser,
-  FaUser,
 } from "react-icons/fa";
 import { PiMaskHappyFill } from "react-icons/pi";
 import { FaBasketShopping } from "react-icons/fa6";
@@ -111,16 +110,8 @@ function Header() {
 
           {/* right header */}
           <div className="flex justify-end items-center gap-1">
-            {!isLargeScreen && (
-              <Button
-                title="login"
-                icon={<IoSearch />}
-              />
-            )}
-            <Button
-              title="login"
-              icon={<FaRegUser />}
-            />
+            {!isLargeScreen && <Button title="login" icon={<IoSearch />} />}
+            <Button title="login" icon={<FaRegUser />} />
           </div>
         </div>
       </main>

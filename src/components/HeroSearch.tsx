@@ -25,11 +25,11 @@ function HeroSearch() {
 
   const [isActiveDate, setIsActiveDate] = useState<boolean>(false);
   const [selectedDateOne, setSelectedDateOne] = useState<Date | null>(null);
-  const [selectedDateTwo, setSelectedDateTwo] = useState<Date | null>(null);
   const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([
     null,
     null,
   ]);
+  const selectedDateTwo: Date | null = null;
 
   useEffect(() => {
     const updateScreenSize = () => {
@@ -132,10 +132,7 @@ function HeroSearch() {
 
       {/* Search Button */}
       <div className="w-1/5 h-full relative bg-[#0d4b72] rounded-full flex justify-center items-center text-white">
-        <Button
-          title="search"
-          icon={<IoSearch />}
-        />
+        <Button title="search" icon={<IoSearch />} />
       </div>
 
       {/* result search */}

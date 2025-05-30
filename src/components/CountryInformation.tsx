@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -79,8 +79,8 @@ const CountryInfromationItem: TypeCountry[] = [
 ];
 
 function CountryInformation() {
-  const [firstSwiper, setFirstSwiper] = useState<any>(null);
-  const [secondSwiper, setSecondSwiper] = useState<any>(null);
+const [firstSwiper, setFirstSwiper] = useState<SwiperClass | null>(null);
+const [secondSwiper, setSecondSwiper] = useState<SwiperClass | null>(null);
 
   const handleNext = () => {
     firstSwiper?.slideNext();

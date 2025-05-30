@@ -5,7 +5,7 @@ import { BsFillSendArrowUpFill } from "react-icons/bs";
 import { FaRegStar, FaRegUser } from "react-icons/fa";
 
 function SendComment() {
-  const [allowSend, setAllowSend] = useState<boolean>(false);
+  const allowSend: boolean = false;
   return (
     <div className="w-11/12 sm:h-40 p-2 my-2 rounded-md flex justify-between items-center relative flex-wrap">
       <div className="sm:w-2/3 w-full sm:h-full h-32">
@@ -34,8 +34,10 @@ function SendComment() {
       {allowSend && (
         <div className="w-full h-full absolute top-0 left-0 bg-white/10 backdrop-blur-md rounded-lg overflow-hidden">
           <div className="w-full h-full flex justify-center items-center flex-col gap-4">
-            <p className="text-black">You need to login to your account to write a comment.</p>
-            <Button title="login"  icon={<FaRegUser />} />
+            <p className="text-black">
+              You need to login to your account to write a comment.
+            </p>
+            <Button title="login" icon={<FaRegUser />} />
           </div>
         </div>
       )}

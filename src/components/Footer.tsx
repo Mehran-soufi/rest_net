@@ -1,7 +1,7 @@
 "use client";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
 import { FaChevronUp, FaHandHoldingHeart } from "react-icons/fa";
 import Button from "./Button";
 import { TfiEmail } from "react-icons/tfi";
@@ -33,14 +33,11 @@ const links: LinkType[] = [
   },
 ];
 
-
-
 function Footer() {
+  const HandleBackUp = () => {
+    window.scrollTo({ top: 0 });
+  };
 
-    const HandleBackUp = () => {
-          window.scrollTo({ top: 0 });
-      };
-      
   return (
     <footer className="w-full mt-4 flex flex-col justify-center items-center">
       <div className="w-full border-t border-[#0d4b72] p-4 relative">
@@ -107,12 +104,7 @@ function Footer() {
               placeholder="Subscribe to the newsletter"
               className="w-5/6 outline-none border-none px-2"
             />
-            <Button
-              title="Subscribe"
-              icon={<TfiEmail />}
-              width="w-1"
-              height="h-full"
-            ></Button>
+            <Button title="Subscribe" icon={<TfiEmail />}></Button>
           </div>
         </div>
       </div>

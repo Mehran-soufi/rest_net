@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function Add() {
   const [numberPass, setNumberPass] = useState<number>(1);
-  const [price, setPrice] = useState<number>(800);
+  const price: number = 800;
 
   const handlePlusNumber = () => {
     setNumberPass((prev) => prev + 1);
@@ -19,7 +19,7 @@ function Add() {
   return (
     <div className="lg:w-1/4 w-full  sticky top-[20%] p-4 shadow-md shadow-slate-300 rounded-lg">
       <div className="w-full h-full flex flex-col justify-center items-stretch gap-4">
-      <div className="w-full flex justify-between items-center flex-wrap">
+        <div className="w-full flex justify-between items-center flex-wrap">
           <span className="text-main select-none">Presenter:</span>
           <Image
             src="/assets/logo/rest_net.png"
