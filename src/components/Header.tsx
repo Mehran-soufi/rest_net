@@ -26,9 +26,9 @@ interface MenuButtonType {
 
 const menuButtons: MenuButtonType[] = [
   { title: "home", link: "/", icon: <FaHome /> },
-  { title: "blog", link: "/blog", icon: <FaBlog /> },
   { title: "tour", link: "/tour", icon: <PiMaskHappyFill /> },
   { title: "hotel", link: "/hotel", icon: <MdHomeWork /> },
+  { title: "blog", link: "/blog", icon: <FaBlog /> },
   { title: "podcast", link: "/podcast", icon: <FaPodcast /> },
 ];
 
