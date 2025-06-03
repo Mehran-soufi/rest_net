@@ -11,7 +11,6 @@ import { sortingItem } from "./Sorting";
 function FilterMenu() {
   const [sortMenu, setSortMenu] = useState<string>("defult");
   const [filtershow, setFilterShow] = useState<boolean>(false);
-  const [isLargeScreen, setIsLargeScreen] = useState<boolean>(false);
   const [isActiveDate, setIsActiveDate] = useState<boolean>(false);
   const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([
     null,
@@ -115,9 +114,7 @@ function FilterMenu() {
                     value={cityValue}
                     autoComplete="off"
                     onChange={(e) => setCityValue(e.target.value.trimStart())}
-                    className={`w-full h-full bg-transparent border-none outline-none rounded-s-full font-bold ${
-                      isLargeScreen ? "px-8 py-2" : "p-2"
-                    }`}
+                    className={`w-full h-full bg-transparent border-none outline-none rounded-s-full font-bold `}
                   />
                 </div>
               </div>
@@ -152,9 +149,7 @@ function FilterMenu() {
                         : ""
                     }
                     readOnly
-                    className={`w-full h-full bg-transparent border-none outline-none rounded-s-full font-bold ${
-                      isLargeScreen ? "px-8 py-2" : "p-2"
-                    }`}
+                    className={`w-full h-full bg-transparent border-none outline-none rounded-s-full font-bold `}
                   />
 
                   {/* Date Picker */}
