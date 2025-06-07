@@ -7,7 +7,7 @@ import { IoAirplaneOutline, IoShareSocialOutline } from "react-icons/io5";
 import { LiaHourglassEndSolid, LiaHourglassStartSolid } from "react-icons/lia";
 import { MdOutlineLocationOff, MdOutlineLocationOn } from "react-icons/md";
 
-export default function page() {
+export default function OneProduct() {
   return (
     <div className="w-full flex justify-center items-start my-8">
       <div className="w-11/12 flex flex-col justify-center items-center gap-4">

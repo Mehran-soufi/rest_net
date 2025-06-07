@@ -19,7 +19,6 @@ export default function RootLayout({
       <Head>
         <meta name="theme-color" content="#0d4b72" />
       </Head>
-
       <body>
         <Header />
         {children}

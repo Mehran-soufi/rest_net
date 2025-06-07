@@ -109,10 +109,14 @@ function Header() {
           )}
 
           {/* right header */}
-          <div className="flex justify-end items-center gap-1">
+          <Link
+            className="flex justify-end items-center gap-1"
+            href="/login"
+            target="_blank"
+          >
             {!isLargeScreen && <Button title="login" icon={<IoSearch />} />}
             <Button title="login" icon={<FaRegUser />} />
-          </div>
+          </Link>
         </div>
       </main>
       {showMenu && (

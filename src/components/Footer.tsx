@@ -102,9 +102,11 @@ function Footer() {
             <input
               type="email"
               placeholder="Subscribe to the newsletter"
-              className="w-5/6 outline-none border-none px-2"
+              className="w-4/6 outline-none border-none px-2"
             />
+            <div className="w-2/6">
             <Button title="Subscribe" icon={<TfiEmail />}></Button>
+            </div>
           </div>
         </div>
       </div>

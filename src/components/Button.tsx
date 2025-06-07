@@ -19,7 +19,7 @@ function Button({ title, icon }: { title: string; icon: React.ReactElement }) {
 
   return (
     <button
-      className={`outline-none flex justify-center items-center border border-transparent rounded-full cursor-pointer text-white font-bold transition duration-300 ease-linear hover:scale-95 
+      className={`w-full outline-none flex justify-center items-center border border-transparent rounded-full cursor-pointer text-white font-bold transition duration-300 ease-linear hover:scale-95 
        bg-main ${isLargeScreen ? "px-8 py-2" : "p-2"} `}
     >
       {isLargeScreen ? title : icon}
