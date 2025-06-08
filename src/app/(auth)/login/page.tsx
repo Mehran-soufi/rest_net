@@ -2,8 +2,7 @@ import Button from "@/components/Button";
 import Image from "next/image";
 import Link from "next/link";
 import { FaHeadphones } from "react-icons/fa";
-import { IoIosLogIn } from "react-icons/io";
-import { MdOutlineWavingHand } from "react-icons/md";
+import { MdNumbers, MdOutlineWavingHand } from "react-icons/md";
 
 export default function Login() {
   return (
@@ -36,7 +35,9 @@ export default function Login() {
             </div>
           </div>
           <div className="w-full flex justify-center items-center">
-            <Button title="login" icon={<IoIosLogIn />} />
+            <Link className="w-full outline-none border-none" href="/login/code">
+              <Button title="Get code" icon={<MdNumbers  />} />
+            </Link>
           </div>
           <div className="w-full flex items-center justify-center">
             <button className="flex items-center gap-1 cursor-pointer">
