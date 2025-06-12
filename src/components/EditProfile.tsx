@@ -26,9 +26,7 @@ function EditProfile({
   const [phone, setPhone] = useState<string>("09213821172");
   const [job, setJob] = useState<string>("Programmer");
   const [birthday, setBirthday] = useState<string>("2000-01-19");
-  const [membership, setMembership] = useState<string>(
-    new Date().toISOString().split("T")[0]
-  );
+  const membership: string = new Date().toISOString().split("T")[0];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

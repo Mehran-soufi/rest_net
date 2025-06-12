@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { FaRegEdit } from "react-icons/fa";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
-export default function prfilePage() {
+export default function PrfilePage() {
   const [editProfile, setEditProfile] = useState<boolean>(false);
   const router = useRouter();
   const pathName = usePathname();
