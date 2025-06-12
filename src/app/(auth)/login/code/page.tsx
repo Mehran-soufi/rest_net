@@ -66,11 +66,10 @@ export default function CodeLogin() {
                 />
               ))}
             </div>
-            <div
-              className="w-full flex justify-center items-center"
-              onClick={handleSubmit}
-            >
-              <Button title="login" icon={<IoIosLogIn />} />
+            <div className="w-full flex justify-center items-center">
+              <Link onClick={handleSubmit} href="/account" className="w-full border-none outline-none">
+                <Button title="login" icon={<IoIosLogIn />} />
+              </Link>
             </div>
             <div className="w-full flex items-center justify-center">
               <button className="flex items-center gap-1 cursor-pointer">

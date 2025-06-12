@@ -20,7 +20,7 @@ export default function Category() {
               {Array.from({ length: 10 }).map((_, index) => (
                 <Link
                   key={index}
-                  href="/"
+                  href={`/${index}`}
                   target="_blank"
                   className="w-full md:h-[40vh] rounded-lg bg-slate-50
                  flex justify-between items-center md:flex-row flex-col xl:gap-4 lg:gap-2 md:gap-1 outline-none border-none

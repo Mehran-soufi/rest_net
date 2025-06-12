@@ -152,3 +152,25 @@ body {
   -webkit-appearance: none;
   -moz-appearance: textfield;
 }
+
+/* account */
+.circle-cut {
+  --r: 10px; /* cut size */
+  aspect-ratio: 1.2;
+  border-radius: 10px;
+  mask: radial-gradient(var(--r) at var(--r), #0000 calc(100% - 1px), #000)
+    calc(-1 * var(--r));
+}
+
+/* edit profile */
+.edit-profile {
+  animation: editProfile 1s ease-out;
+}
+@keyframes editProfile {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

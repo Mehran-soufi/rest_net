@@ -139,7 +139,7 @@ function AdFilter() {
           </div>
         </div>
         {/* Price */}
-        <div className="w-full py-2 border-b border-slate-300"> 
+        <div className="w-full py-2 border-b border-slate-300 z-50"> 
           <h2 className="text-main font-bold xl:text-lg mb-2">Price:</h2>
           <Slider
             range

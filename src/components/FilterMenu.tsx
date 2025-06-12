@@ -154,7 +154,7 @@ function FilterMenu() {
 
                   {/* Date Picker */}
                   {isActiveDate && (
-                    <div className="absolute w-full bg-white/80 backdrop-blur-lg shadow-inner shadow-[#0d4b72] top-0 rounded-md">
+                    <div className="absolute w-full bg-white/80 backdrop-blur-lg shadow-inner shadow-[#0d4b72] top-0 rounded-md z-50">
                       <div className="w-full flex justify-center items-center p-4">
                         <DatePicker
                           selected={dateRange[0]}
@@ -193,7 +193,7 @@ function FilterMenu() {
                     },
                     rail: { backgroundColor: "#e2e8f0", height: 4 },
                   }}
-                  className="-z-10"
+                  className=""
                 />
 
                 <div className="flex justify-between text-sm mt-2">
