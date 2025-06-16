@@ -36,7 +36,7 @@ const accountMenu: AccountTypeMenu[] = [
   },
   {
     title: "Interest",
-    link: "",
+    link: "/account/interest",
     icon: <FaRegHeart />,
   },
   {
@@ -67,32 +67,43 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathName = usePathname();
-  const [widthSize, setWidthSize] = useState<number>(typeof window !== "undefined" ? window.innerWidth : 1024);
 
-useEffect(() => {
-  const handleResize = () => {
-    const newWidth = window.innerWidth;
-    setWidthSize(newWidth);
+  const [widthSize, setWidthSize] = useState<number>(1024);
 
-    if (
-      (newWidth < 750 && widthSize >= 750) ||
-      (newWidth >= 750 && widthSize < 750)
-    ) {
-      window.location.reload();
-    }
-  };
+  useEffect(() => {
+    setWidthSize(window.innerWidth);
+  }, []);
 
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, [widthSize]);
+  useEffect(() => {
+    const handleResize = () => {
+      const newWidth = window.innerWidth;
+      setWidthSize(newWidth);
+
+      if (
+        (newWidth < 750 && widthSize >= 750) ||
+        (newWidth >= 750 && widthSize < 750)
+      ) {
+        window.location.reload();
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [widthSize]);
 
   return (
     <div className="w-full my-8 flex justify-center items-center relative">
       <div className="w-11/12 flex justify-between items-start xl:gap-4 lg:gap-3 md:gap-2 gap-1 md:flex-row flex-col">
         <div
           className={`p-4 lg:w-1/4 md:w-2/5 w-full border border-slate-200 rounded-lg md:sticky top-[10%]
-                   ${widthSize >= 750 || pathName == "/account" ? "inline" : "hidden"}
-            `}
+              ${
+                widthSize <= 750
+                  ? pathName === "/account"
+                    ? "inline"
+                    : "hidden"
+                  : ""
+              }
+                    `}
         >
           <div className="w-full h-full flex flex-col items-center justify-start">
             <div className="w-full flex items-center justify-center gap-2 py-2 border-b border-slate-200">
