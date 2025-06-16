@@ -3,7 +3,15 @@ import React from "react";
 
 function MobileApp() {
   return (
-    <div className="w-full py-8 flex justify-center items-center">
+    <div
+      className="w-full py-8 flex justify-center items-center"
+      style={{
+        backgroundImage: `url("/assets/app/background.png")`,
+        backgroundPosition: "bottom",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "100%",
+      }}
+    >
       <div className="w-4/5 h-full flex justify-center items-center flex-wrap gap-4">
         <div>
           <Image src="/assets/app/app.webp" alt="" width={350} height={100} />
@@ -25,7 +33,7 @@ function MobileApp() {
               height={100}
               className="cursor-pointer"
             />
-                   <Image
+            <Image
               src="/assets/app/app-store.png"
               alt=""
               width={100}
