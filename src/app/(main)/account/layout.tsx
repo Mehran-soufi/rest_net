@@ -41,22 +41,22 @@ const accountMenu: AccountTypeMenu[] = [
   },
   {
     title: "Orders",
-    link: "",
+    link: "/account/order",
     icon: <MdOutlineShoppingBag />,
   },
   {
     title: "Comments",
-    link: "",
+    link: "/account/comment",
     icon: <FaRegCommentDots />,
   },
   {
     title: "Recent visits",
-    link: "",
+    link: "/account/visit",
     icon: <MdOutlineHistory />,
   },
   {
     title: "Exit",
-    link: "",
+    link: "/",
     icon: <MdOutlineLogout />,
   },
 ];

@@ -10,7 +10,7 @@ import { MdMoveDown } from "react-icons/md";
 import { usePathname, useRouter } from "next/navigation";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
-export default function InterestPage() {
+export default function VisitPage() {
   const router = useRouter();
   const pathName = usePathname();
   const lastPathSegment = pathName?.split("/").filter(Boolean).pop();
@@ -47,7 +47,7 @@ export default function InterestPage() {
               className="object-cover"
             />
           </div>
-          <div className="lg:w-3/4 w-full h-full lg:px-0 px-2 flex flex-col items-start lg:justify-center justify-start xl:gap-6 lg:gap-5 lg:gap-4 gap-3 lg:py-4 py-2">
+          <div className="lg:w-3/4 w-full h-full lg:px-0 px-2 flex flex-col items-start lg:justify-center justify-start xl:gap-6 lg:gap-5 md:gap-4 gap-3 lg:py-4 py-2">
             <div className="w-full flex items-center lg:justify-between justify-start flex-wrap">
               <h2 className="font-bold xl:text-2xl text-lg flex-auto lg:w-auto w-full">
                 Thailand the buetuful country for passengers
