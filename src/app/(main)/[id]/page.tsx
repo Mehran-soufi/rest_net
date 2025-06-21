@@ -12,13 +12,17 @@ interface PageProps {
   params: { id: string };
 }
 
+export default async function OneProduct({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const { id } = params;
 
-export default function OneProduct({ params }: PageProps) {
-    const { id } = params;
-
-    if (!/^\d+$/.test(id)) {
-     notFound();
+  if (!/^\d+$/.test(id)) {
+    notFound();
   }
+
   return (
     <div className="w-full flex justify-center items-start my-8">
       <div className="w-11/12 flex flex-col justify-center items-center gap-4">
