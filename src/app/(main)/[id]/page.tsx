@@ -6,8 +6,19 @@ import { FaHeart, FaRegHeart, FaStar } from "react-icons/fa";
 import { IoAirplaneOutline, IoShareSocialOutline } from "react-icons/io5";
 import { LiaHourglassEndSolid, LiaHourglassStartSolid } from "react-icons/lia";
 import { MdOutlineLocationOff, MdOutlineLocationOn } from "react-icons/md";
+import { notFound } from "next/navigation";
 
-export default function OneProduct() {
+interface PageProps {
+  params: { id: string };
+}
+
+
+export default function OneProduct({ params }: PageProps) {
+    const { id } = params;
+
+    if (!/^\d+$/.test(id)) {
+     notFound();
+  }
   return (
     <div className="w-full flex justify-center items-start my-8">
       <div className="w-11/12 flex flex-col justify-center items-center gap-4">

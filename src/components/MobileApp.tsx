@@ -4,7 +4,7 @@ import React from "react";
 function MobileApp() {
   return (
     <div
-      className="w-full py-8 flex justify-center items-center"
+      className="w-full flex justify-center items-center"
       style={{
         backgroundImage: `url("/assets/app/background.png")`,
         backgroundPosition: "bottom",

@@ -2,7 +2,7 @@ import React from "react";
 
 function HeroPodcast() {
   return (
-    <div className="w-full xl:h-[60vh] h-[50vh] my-8 hero-podcast select-none cursor-pointer">
+    <div className="w-full xl:h-[60vh] h-[50vh] mt-8 hero-podcast select-none cursor-pointer">
       <div className="w-full h-full bg-gradient-to-br from-black/60 to-transparent">
         <div className="w-3/4 h-full p-4 flex flex-col justify-center items-center gap-8">
           <p className="text-white font-bold xl:text-8xl lg:text-7xl md:text-5xl text-2xl">
