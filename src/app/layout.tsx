@@ -6,7 +6,10 @@ import Head from "next/head";
 import NavigationEvents from "@/components/NavigationEvents";
 
 export const metadata: Metadata = {
-  title: "restnet",
+  title: {
+    default: "restnet",
+    template: "restnet | %s",
+  },
   description: "Travel tour booking site",
 };
 
@@ -17,9 +20,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta name="theme-color" content="#0d4b72" />
-      </Head>
       <body>
         <NavigationEvents />
         <Header />

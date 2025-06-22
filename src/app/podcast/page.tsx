@@ -1,6 +1,10 @@
 import Article from "@/components/Article";
 import React from "react";
 
-export default function page() {
+export const metadata = {
+  title: "podcast",
+};
+
+export default function PpdcastPage() {
   return <Article />;
 }

@@ -8,6 +8,10 @@ import { FaCalendarDays } from "react-icons/fa6";
 import { IoAirplaneOutline } from "react-icons/io5";
 import { MdMoveDown } from "react-icons/md";
 
+export const metadata = {
+  title: "category",
+};
+
 export default function Category() {
   return (
     <section className="w-full flex justify-center items-center relative">

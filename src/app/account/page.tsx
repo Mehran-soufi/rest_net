@@ -4,6 +4,10 @@ import { BiCommentEdit } from "react-icons/bi";
 import { CiShoppingTag } from "react-icons/ci";
 import { PiHandHeartLight } from "react-icons/pi";
 
+export const metadata = {
+  title: "account",
+};
+
 export default function AccountPage() {
   return (
     <div className="w-full flex flex-col items-start justify-center gap-8">

@@ -4,6 +4,10 @@ import Link from "next/link";
 import { FaHeadphones } from "react-icons/fa";
 import { MdNumbers, MdOutlineWavingHand } from "react-icons/md";
 
+export const metadata = {
+  title: "login",
+};
+
 export default function Login() {
   return (
     <div className="w-full h-[85vh] flex justify-center items-center">
@@ -35,8 +39,11 @@ export default function Login() {
             </div>
           </div>
           <div className="w-full flex justify-center items-center">
-            <Link className="w-full outline-none border-none" href="/login/code">
-              <Button title="Get code" icon={<MdNumbers  />} />
+            <Link
+              className="w-full outline-none border-none"
+              href="/login/code"
+            >
+              <Button title="Get code" icon={<MdNumbers />} />
             </Link>
           </div>
           <div className="w-full flex items-center justify-center">
