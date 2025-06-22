@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Head from "next/head";
 import NavigationEvents from "@/components/NavigationEvents";
 
 export const metadata: Metadata = {
