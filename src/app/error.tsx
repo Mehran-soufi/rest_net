@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-import './(main)/globals.css'
+// import './(main)/globals.css'
 
 
 export default function Error() {

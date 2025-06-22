@@ -6,7 +6,7 @@ import { MdNumbers, MdOutlineWavingHand } from "react-icons/md";
 
 export default function Login() {
   return (
-    <div className="w-full h-screen flex justify-center items-center">
+    <div className="w-full h-[85vh] flex justify-center items-center">
       <div className="rounded-lg shadow-md shadow-[#0d4b72] xl:py-8 p-4 xl:px-6">
         <div className="xl:w-80 sm:w-72 w-64 flex flex-col justify-center items-center gap-8">
           <Link href="/" className="relative w-40 h-14">

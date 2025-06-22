@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 
-import './(main)/globals.css'
+// import './(main)/globals.css'
 
 
 export default function Loading() {

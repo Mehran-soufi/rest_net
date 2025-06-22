@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../../(main)/globals.css";
+import "../../globals.css";
 
 export const metadata: Metadata = {
   title: "restnet | login",
@@ -12,8 +12,8 @@ export default function LoginLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
-      <body>{children}</body>
-    </html>
+    <>
+      {children}
+    </>
   );
 }
