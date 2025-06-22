@@ -6,7 +6,7 @@ import './(main)/globals.css'
 
 export default function NotFound() {
   return (
-    <div className="w-full h-[85vh] flex flex-col justify-center items-center select-none">
+    <div className="w-full h-screen flex flex-col justify-center items-center select-none">
       <div className="md:w-[420] w-80 md:h-[320] h-72 relative">
         <Image src="/assets/notFound/notFound.webp" alt="not found" fill />
       </div>
