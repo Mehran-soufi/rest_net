@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Head from "next/head";
+import NavigationEvents from "@/components/NavigationEvents";
 
 export const metadata: Metadata = {
   title: "restnet",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#0d4b72" />
       </Head>
       <body>
+        <NavigationEvents />
         <Header />
         {children}
         <Footer />
