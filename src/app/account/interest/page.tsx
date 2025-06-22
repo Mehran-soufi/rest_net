@@ -10,6 +10,7 @@ import { MdMoveDown } from "react-icons/md";
 import { usePathname, useRouter } from "next/navigation";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
+
 export default function InterestPage() {
   const router = useRouter();
   const pathName = usePathname();
