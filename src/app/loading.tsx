@@ -2,6 +2,9 @@
 import Image from "next/image";
 import React from "react";
 
+import './(main)/globals.css'
+
+
 export default function Loading() {
   return (
     <div className="w-full h-[85vh] flex justify-center items-center">

@@ -1,6 +1,9 @@
 "use client";
 import React from "react";
 
+import './(main)/globals.css'
+
+
 export default function Error() {
   const handleRefresh = () => {
     window.location.reload();

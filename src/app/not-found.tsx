@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+import './(main)/globals.css'
+
 export default function NotFound() {
   return (
     <div className="w-full h-[85vh] flex flex-col justify-center items-center select-none">
